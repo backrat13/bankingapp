@@ -1,12 +1,15 @@
 {
   "name": "bankingapp",
   "version": "1.0.0",
+  "description": "Banking app landing page",
+  "private": true,
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "start": "node server.js"
+    "dev": "python -m http.server 8000",
+    "build": "mkdir -p build && cp index.html build/index.html && cp README.md build/README.md"
   },
-  "dependencies": {
-    "react": "^18.0.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/labrat/bankingapp.git"
+  },
+  "homepage": "https://labrat.github.io/bankingapp"
 }
