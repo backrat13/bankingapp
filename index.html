@@ -1,1 +1,87 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceApp - Take Control of Your Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#16a34a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900 p-6">
+    <!-- Header -->
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold mb-4 text-primary-green">
+            Take Control of Your Money
+        </h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Our tool helps you track, schedule, and prioritize your income and expenses — giving you
+            security, automation, and full control over your financial future.
+        </p>
+    </header>
+
+    <!-- Benefits Section -->
+    <section class="grid gap-6 md:grid-cols-3 max-w-5xl w-full mb-12">
+        <div class="p-6 bg-white rounded-2xl shadow-md text-center">
+            <h3 class="font-semibold text-xl mb-2">Security</h3>
+            <p class="text-gray-600">Your money is tracked and managed safely, with modern protections in place.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-md text-center">
+            <h3 class="font-semibold text-xl mb-2">Control</h3>
+            <p class="text-gray-600">You decide where every dollar goes, with automated scheduling and prioritization.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-md text-center">
+            <h3 class="font-semibold text-xl mb-2">Automation</h3>
+            <p class="text-gray-600">Set your rules once, and let the app allocate funds automatically — no guesswork needed.</p>
+        </div>
+    </section>
+
+    <!-- Email Capture -->
+    <section class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md">
+        <h2 class="text-2xl font-bold mb-4 text-center">Stay Updated</h2>
+        <p class="text-gray-600 mb-6 text-center">Sign up to get early access and updates as we build the future of personal finance.</p>
+        <form class="flex flex-col sm:flex-row gap-4">
+            <input
+                type="email"
+                placeholder="Enter your email"
+                class="flex-1 px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+            />
+            <button
+                type="submit"
+                class="px-6 py-2 bg-primary-green text-white rounded-xl shadow hover:bg-green-700 transition"
+            >
+                Notify Me
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-sm text-gray-500 text-center">
+        © <span id="current-year"></span> FinanceApp. All rights reserved.
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert('Thank you for your interest! We\'ll be in touch soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
