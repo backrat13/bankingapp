@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "python -m http.server 8000",
-    "build": "mkdir -p build && cp index.html build/index.html && cp README.md build/README.md"
+    "build": "rm -rf build && mkdir build && cp -r * build/ && rm -rf build/node_modules build/package.json"
+ 
   },
   "repository": {
     "type": "git",
