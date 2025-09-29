@@ -1,23 +1,12 @@
 {
-<<<<<<< HEAD
-  "name": "bank4u-landing",
+  "name": "bankingapp",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "build": "mkdir -p build && cp index.html build/index.html && cp README.md build/README.md"
+    "build": "vite build",
+    "dev": "vite",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
   }
-=======
-  "name": "finance-app-landing",
-  "version": "1.0.0",
-  "description": "Personal finance automation app landing page",
-  "scripts": {
-    "dev": "python -m http.server 8000",
-    "build": "echo 'No build step required for static HTML'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/labrat/finance-app-landing.git"
-  },
-  "homepage": "https://labrat.github.io/finance-app-landing"
->>>>>>> bc41708 (Main: add all curated JS/docs from bankingapp/Main (duplicates removed))
 }
